@@ -12,9 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
 # Inherit common ArrowOS configurations
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/bootleggers/config/common.mk)
 
-PRODUCT_NAME := arrow_vayu
+PRODUCT_NAME := bootleg_vayu
 PRODUCT_DEVICE := vayu
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := Poco X3 Pro
@@ -29,6 +29,16 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := Xiaomi/vayu_global/vayu:12/RKQ1.200826.002/V13.0.5.0.SJUMIXM:user/release-keys
 
-# ArrowOS additions
-DEVICE_MAINTAINER := kubersharma001, raghavt20
+# Maintainer Prop
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.bootleggers.maintainer=JuanTamadski
+TARGET_BOOTLEG_ARCH := arm64
+WITH_GAPPS := true
+
+## Bootleggers ROM additions
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
+TARGET_USE_SINGLE_BOOTANIMATION := true
+TARGET_PICK_BOOTANIMATION := "6"
 
