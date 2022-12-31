@@ -5,7 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_vayu.mk
+    $(LOCAL_DIR)/bootleg_vayu.mk
 
 COMMON_LUNCH_CHOICES := \
     bootleg_vayu-eng \
