@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bootleg_vayu.mk
+    $(LOCAL_DIR)/aicp_vayu.mk
 
 COMMON_LUNCH_CHOICES := \
-    bootleg_vayu-eng \
-    bootleg_vayu-userdebug \
-    bootleg_vayu-user
+    aicp_vayu-eng \
+    aicp_vayu-userdebug \
+    aicp_vayu-user
